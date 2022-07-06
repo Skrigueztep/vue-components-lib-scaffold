@@ -1,5 +1,5 @@
 <script lang="ts">
-import Vue from 'vue';
+import {defineComponent} from 'vue';
 
 interface SampleData {
   counter: number;
@@ -10,8 +10,8 @@ interface SampleData {
   };
 }
 
-export default /*#__PURE__*/Vue.extend({
-  name: 'ExmapleSample', // vue component name
+export default /*#__PURE__*/defineComponent({
+  name: 'ExampleSample', // vue component name
   data(): SampleData {
     return {
       counter: 5,
@@ -24,7 +24,7 @@ export default /*#__PURE__*/Vue.extend({
   },
   computed: {
     changedBy() {
-      const { message } = this as SampleData;
+      const {message} = this as SampleData;
       if (!message.action) return 'initialized';
       return `${message.action} ${message.amount || ''}`.trim();
     },
@@ -73,16 +73,17 @@ export default /*#__PURE__*/Vue.extend({
 </template>
 
 <style scoped>
-  .exmaple-sample {
-    display: block;
-    width: 400px;
-    margin: 25px auto;
-    border: 1px solid #ccc;
-    background: #eaeaea;
-    text-align: center;
-    padding: 25px;
-  }
-  .exmaple-sample p {
-    margin: 0 0 1em;
-  }
+.exmaple-sample {
+  display: block;
+  width: 400px;
+  margin: 25px auto;
+  border: 1px solid #ccc;
+  background: #eaeaea;
+  text-align: center;
+  padding: 25px;
+}
+
+.exmaple-sample p {
+  margin: 0 0 1em;
+}
 </style>
