@@ -1,12 +1,12 @@
-import _Vue, { PluginFunction } from 'vue';
+import { App, Plugin } from 'vue';
 
 // Import vue components
 import * as components from '@/lib-components/index';
 
 // install function executed by Vue.use()
-const install: PluginFunction<any> = function installExmaple(Vue: typeof _Vue) {
+const install: Exclude<Plugin['install'], undefined> = function(app: App) {
   Object.entries(components).forEach(([componentName, component]) => {
-    Vue.component(componentName, component);
+    app.component(componentName, component);
   });
 };
 

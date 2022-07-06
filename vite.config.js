@@ -1,10 +1,10 @@
 import path from "path";
 import {defineConfig} from 'vite';
-import {createVuePlugin} from "vite-plugin-vue2";
+import vue from '@vitejs/plugin-vue';
 
 module.exports = defineConfig({
   plugins: [
-    createVuePlugin()
+    vue()
   ],
   // Esto es para que pueda resolver los alias de vue
   resolve: {

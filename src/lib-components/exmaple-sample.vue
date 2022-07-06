@@ -1,5 +1,5 @@
 <script lang="ts">
-import Vue from 'vue';
+import {defineComponent} from 'vue';
 
 interface SampleData {
   counter: number;
@@ -10,7 +10,7 @@ interface SampleData {
   };
 }
 
-export default /*#__PURE__*/Vue.extend({
+export default /*#__PURE__*/defineComponent({
   name: 'ExmapleSample', // vue component name
   data(): SampleData {
     return {
