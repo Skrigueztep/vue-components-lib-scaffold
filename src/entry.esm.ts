@@ -11,7 +11,8 @@ const install: PluginFunction<any> = function installExmaple(Vue: typeof _Vue) {
 };
 
 // Create module definition for Vue.use()
-export default install;
+// export default install;
+export { install };
 
 // To allow individual component use, export components
 // each can be registered via Vue.component()
